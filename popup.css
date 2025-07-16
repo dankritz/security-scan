@@ -1,0 +1,257 @@
+body {
+  width: 400px;
+  min-height: 300px;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #333;
+}
+
+.container {
+  background: white;
+  margin: 0;
+  padding: 20px;
+  min-height: 280px;
+  box-sizing: border-box;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.header h1 {
+  margin: 0 0 5px 0;
+  font-size: 20px;
+  color: #2c3e50;
+}
+
+.header p {
+  margin: 0;
+  font-size: 12px;
+  color: #7f8c8d;
+}
+
+.api-key-section {
+  margin-bottom: 20px;
+}
+
+.api-key-section label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #2c3e50;
+  font-size: 14px;
+}
+
+.api-key-section input,
+.api-key-section select {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 14px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  transition: border-color 0.3s ease;
+  background: white;
+}
+
+.api-key-section input:focus,
+.api-key-section select:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.api-key-section select {
+  cursor: pointer;
+}
+
+.api-key-section button {
+  background: #667eea;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.api-key-section button:hover {
+  background: #5a67d8;
+}
+
+.help-text {
+  font-size: 12px;
+  color: #666;
+  margin-top: 8px;
+}
+
+.help-text a {
+  color: #667eea;
+  text-decoration: none;
+}
+
+.help-text a:hover {
+  text-decoration: underline;
+}
+
+.scan-section {
+  margin-bottom: 20px;
+}
+
+.scan-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #27ae60, #2ecc71);
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.scan-btn:hover {
+  background: linear-gradient(135deg, #229954, #27ae60);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(39, 174, 96, 0.3);
+}
+
+.scan-btn:disabled {
+  background: #bdc3c7;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.results-section, .error-section {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.results-section {
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+}
+
+.error-section {
+  background: #fee;
+  border: 1px solid #fcc;
+}
+
+.results-section h3, .error-section h3 {
+  margin: 0 0 15px 0;
+  font-size: 16px;
+  color: #2c3e50;
+}
+
+.vulnerability {
+  background: white;
+  border-left: 4px solid #e74c3c;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.vulnerability.low {
+  border-left-color: #f39c12;
+}
+
+.vulnerability.medium {
+  border-left-color: #e67e22;
+}
+
+.vulnerability.high {
+  border-left-color: #e74c3c;
+}
+
+.vulnerability.critical {
+  border-left-color: #8e44ad;
+}
+
+.vulnerability-title {
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 8px;
+}
+
+.vulnerability-description {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
+.vulnerability-severity {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.severity-low { background: #fff3cd; color: #856404; }
+.severity-medium { background: #ffeaa7; color: #d68910; }
+.severity-high { background: #fadbd8; color: #a93226; }
+.severity-critical { background: #e8daef; color: #6c3483; }
+
+.footer {
+  border-top: 1px solid #f0f0f0;
+  padding-top: 15px;
+  text-align: center;
+}
+
+.settings-btn {
+  background: none;
+  border: 1px solid #ddd;
+  color: #666;
+  padding: 8px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.settings-btn:hover {
+  background: #f8f9fa;
+  border-color: #667eea;
+  color: #667eea;
+}
+
+.no-vulnerabilities {
+  text-align: center;
+  padding: 20px;
+  color: #27ae60;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.loading-spinner {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #667eea;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-right: 10px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+} 
