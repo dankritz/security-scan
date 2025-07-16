@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="shieldGrad128" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4f46e5;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#6366f1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="glassGrad128" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#0891b2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0e7490;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="backgroundGrad" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f8fafc;stop-opacity:1" />
+    </radialGradient>
+    <filter id="shadowLarge" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="3" dy="6" stdDeviation="4" flood-color="#000000" flood-opacity="0.25"/>
+    </filter>
+    <filter id="innerShadow">
+      <feOffset dx="0" dy="2"/>
+      <feGaussianBlur stdDeviation="2" result="offset-blur"/>
+      <feFlood flood-color="#000000" flood-opacity="0.1"/>
+      <feComposite in2="offset-blur" operator="in"/>
+    </filter>
+  </defs>
+  
+  <!-- Background circle with gradient -->
+  <circle cx="64" cy="64" r="60" fill="url(#backgroundGrad)" stroke="#d1d5db" stroke-width="2"/>
+  
+  <!-- Main shield with enhanced details -->
+  <path d="M64 16 L44 26 L44 52 Q44 70 64 84 Q84 70 84 52 L84 26 Z" 
+        fill="url(#shieldGrad128)" 
+        stroke="#3730a3" 
+        stroke-width="2" 
+        filter="url(#shadowLarge)"/>
+  
+  <!-- Shield inner shadow for depth -->
+  <path d="M64 20 L48 28 L48 50 Q48 65 64 78 Q80 65 80 50 L80 28 Z" 
+        fill="none" 
+        stroke="#1e1b4b" 
+        stroke-width="1" 
+        opacity="0.3"/>
+  
+  <!-- Shield highlight -->
+  <path d="M64 20 L48 28 L48 50 Q48 62 58 72" 
+        fill="none" 
+        stroke="#a78bfa" 
+        stroke-width="2" 
+        opacity="0.7"/>
+  
+  <!-- Additional shield detail -->
+  <path d="M64 22 L50 30 L50 48 Q50 58 60 68" 
+        fill="none" 
+        stroke="#c4b5fd" 
+        stroke-width="1" 
+        opacity="0.5"/>
+  
+  <!-- Security check mark with enhanced styling -->
+  <path d="M54 50 L60 56 L74 42" 
+        fill="none" 
+        stroke="#ffffff" 
+        stroke-width="4" 
+        stroke-linecap="round" 
+        stroke-linejoin="round" 
+        filter="url(#shadowLarge)"/>
+  
+  <!-- Check mark highlight -->
+  <path d="M54 50 L60 56 L74 42" 
+        fill="none" 
+        stroke="#f0f9ff" 
+        stroke-width="2" 
+        stroke-linecap="round" 
+        stroke-linejoin="round" 
+        opacity="0.8"/>
+  
+  <!-- Magnifying glass with enhanced details -->
+  <g transform="translate(76, 76)" filter="url(#shadowLarge)">
+    <!-- Glass circle -->
+    <circle cx="0" cy="0" r="14" 
+            fill="url(#glassGrad128)" 
+            stroke="#0e7490" 
+            stroke-width="2"/>
+    
+    <!-- Glass inner rim -->
+    <circle cx="0" cy="0" r="12" 
+            fill="none" 
+            stroke="#155e75" 
+            stroke-width="1" 
+            opacity="0.6"/>
+    
+    <!-- Glass highlight -->
+    <circle cx="-4" cy="-4" r="5" 
+            fill="#ffffff" 
+            opacity="0.4"/>
+    
+    <!-- Smaller highlight -->
+    <circle cx="-2" cy="-2" r="2" 
+            fill="#ffffff" 
+            opacity="0.8"/>
+    
+    <!-- Handle with gradient effect -->
+    <line x1="10" y1="10" x2="20" y2="20" 
+          stroke="#0e7490" 
+          stroke-width="5" 
+          stroke-linecap="round"/>
+    
+    <!-- Handle highlight -->
+    <line x1="10" y1="10" x2="18" y2="18" 
+          stroke="#06b6d4" 
+          stroke-width="2" 
+          stroke-linecap="round"/>
+    
+    <!-- Scan lines in glass -->
+    <g opacity="0.7">
+      <path d="M-8 -3 L8 -3" stroke="#ffffff" stroke-width="1"/>
+      <path d="M-8 0 L8 0" stroke="#ffffff" stroke-width="1"/>
+      <path d="M-8 3 L8 3" stroke="#ffffff" stroke-width="1"/>
+    </g>
+    
+    <!-- Glass lens reflection -->
+    <ellipse cx="-3" cy="-6" rx="3" ry="1.5" 
+             fill="#ffffff" 
+             opacity="0.6"/>
+  </g>
+  
+  <!-- Enhanced scan effect rays -->
+  <g opacity="0.4">
+    <path d="M64 84 L58 98 L70 98 Z" fill="#4f46e5"/>
+    <path d="M84 52 L98 46 L98 58 Z" fill="#4f46e5"/>
+    <path d="M44 52 L30 46 L30 58 Z" fill="#4f46e5"/>
+    <path d="M49 70 L36 82 L42 88 Z" fill="#6366f1" opacity="0.6"/>
+    <path d="M79 70 L92 82 L86 88 Z" fill="#6366f1" opacity="0.6"/>
+  </g>
+  
+  <!-- Security status indicators -->
+  <circle cx="32" cy="32" r="3" fill="#10b981" opacity="0.9" filter="url(#shadowLarge)"/>
+  <circle cx="96" cy="32" r="3" fill="#10b981" opacity="0.9" filter="url(#shadowLarge)"/>
+  <circle cx="32" cy="96" r="3" fill="#f59e0b" opacity="0.9" filter="url(#shadowLarge)"/>
+  
+  <!-- Small highlight dots on indicators -->
+  <circle cx="31" cy="31" r="1" fill="#ffffff" opacity="0.8"/>
+  <circle cx="95" cy="31" r="1" fill="#ffffff" opacity="0.8"/>
+  <circle cx="31" cy="95" r="1" fill="#ffffff" opacity="0.8"/>
+  
+  <!-- Subtle scanning animation rays -->
+  <g opacity="0.2">
+    <path d="M64 16 L60 8 L68 8 Z" fill="#8b5cf6"/>
+    <path d="M84 26 L92 22 L92 30 Z" fill="#8b5cf6"/>
+    <path d="M44 26 L36 22 L36 30 Z" fill="#8b5cf6"/>
+  </g>
+</svg> 

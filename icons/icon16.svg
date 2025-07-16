@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
+  <defs>
+    <linearGradient id="shieldGrad16" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4f46e5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Simplified shield for 16px -->
+  <path d="M8 2 L5 3.5 L5 7.5 Q5 10 8 11.5 Q11 10 11 7.5 L11 3.5 Z" 
+        fill="url(#shieldGrad16)" 
+        stroke="#3730a3" 
+        stroke-width="0.5"/>
+  
+  <!-- Simple check mark -->
+  <path d="M6.5 7 L7.5 8 L9.5 6" 
+        fill="none" 
+        stroke="#ffffff" 
+        stroke-width="1" 
+        stroke-linecap="round"/>
+  
+  <!-- Small magnifying glass -->
+  <g transform="translate(11, 11)">
+    <circle cx="0" cy="0" r="2" 
+            fill="#06b6d4" 
+            stroke="#0891b2" 
+            stroke-width="0.5"/>
+    <line x1="1.5" y1="1.5" x2="3" y2="3" 
+          stroke="#0891b2" 
+          stroke-width="1" 
+          stroke-linecap="round"/>
+  </g>
+</svg> 
